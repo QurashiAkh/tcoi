@@ -24,8 +24,15 @@ hello: Q-2I6FNiwHvIWuEl2tnW3229N5ZAaY
 
 A Hashserver is an HTTP web service that hosts a Hasher which performs the functionality explained above, which is an implementation of decentralised Ishaq Codes, as the use of a Hasher alone isn’t practical.
 
-Users may send POST requests to the Hashserver’s home `/` route and the Response will be a JSON-formatted response that consists of an object containing two values, that are `text` which is the original value requested, and `tcoi` which is the Ishaq Code. Hashservers are conventionally hosted on the subdomain `hs`. As an example:
+Users may send `POST` requests to the Hashserver’s home `/` route and the Response will be a JSON-formatted response that consists of an object containing two values, that are `text` which is the original value requested, and `tcoi` which is the Ishaq Code.
+If the `/` Route gets a `DELETE` Request, which clears the Hashfile and deletes all codes, the HTTP Request would need an `Authorization` Header which contains a Secret Passphrase that permits him to perform that operation.
+If the `/` Route gets an authorised `GET` request, it will return a list of all the currently generated codes.
+If the `/` Route gets a usual `GET` request, it'll respond with text saying:
+```
+TCOI Hashserver @ [Hashserver's IP Address or full Domain]
+```
 
+Hashservers are conventionally hosted on the subdomain `hs`, as an example:
 ```
 http://hs.example.com
 ```
