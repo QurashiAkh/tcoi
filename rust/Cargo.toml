@@ -1,0 +1,17 @@
+[package]
+name = "tcoi"
+authors = ["Husayn al-Qurash <husayn@dnmx.org>"]
+description = "TCOI: The Code of Ishaq."
+readme = "README.md"
+homepage = "https://github.com/qurashiakh/tcoi"
+repository = "https://github.com/qurashiakh/tcoi"
+license = "GPL-3.0-only"
+keywords = ["ishaq", "hashing", "code"]
+version = "0.1.0"
+edition = "2021"
+
+[badges]
+maintenance = { status = "passively-maintained" }
+
+[dependencies]
+rand = "0.8.5"

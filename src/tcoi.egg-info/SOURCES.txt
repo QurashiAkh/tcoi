@@ -2,6 +2,7 @@ LICENSE
 README.md
 pyproject.toml
 src/tcoi/__init__.py
+src/tcoi/classes.py
 src/tcoi/errors.py
 src/tcoi.egg-info/PKG-INFO
 src/tcoi.egg-info/SOURCES.txt

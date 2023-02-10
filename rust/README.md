@@ -1,18 +1,3 @@
-Metadata-Version: 2.1
-Name: tcoi
-Version: 0.0.2
-Summary: A New Form of Decentralised Hashing.
-Author-email: Husayn al-Qurashi <husayn@dnmx.org>
-Project-URL: Homepage, https://github.com/qurashiakh/tcoi
-Project-URL: Bug Tracker, https://github.com/qurashiakh/tcoi/issues
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
-Classifier: Topic :: Utilities
-Classifier: Operating System :: OS Independent
-Requires-Python: >=3.7
-Description-Content-Type: text/markdown
-License-File: LICENSE
-
 # TCOI: THE CODE OF ISHAQ
 
 *ABSTRACT:* In this Document, we will go through the structure of a variant of hashing that will introduce Hashfiles, Hashservers and Ishaq Codes, which revolves around generating random codes stored in a key-value pairs file called a Hashfile linked to their original value, such will be an HTTP web service called a Hashserver that will host this program, which is called a Hasher, and users will be able to request Ishaq Codes from the Hashserver, and so will the Hashserver retrieve those codes from the Hashfile and respond with them back to the user.
