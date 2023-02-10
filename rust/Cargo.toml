@@ -7,7 +7,7 @@ homepage = "https://github.com/qurashiakh/tcoi"
 repository = "https://github.com/qurashiakh/tcoi"
 license = "GPL-3.0-only"
 keywords = ["ishaq", "hashing", "code"]
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 
 [badges]

@@ -10,7 +10,7 @@ fn main() {
 
     io::stdin()
         .read_line(&mut input_text)
-        .expect("Unexpected Input!");
+        .expect("UNEXPECTED INPUT!");
 
     let text = input_text.trim().to_string();
 
