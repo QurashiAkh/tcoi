@@ -1,7 +1,7 @@
 [package]
 name = "tcoi"
-authors = ["Husayn al-Qurash <husayn@dnmx.org>"]
-description = "TCOI: The Code of Ishaq."
+authors = ["Husayn al-Qurashi <husayn@dnmx.org>"]
+description = "A New Form of Decentralised Hashing."
 readme = "README.md"
 homepage = "https://github.com/qurashiakh/tcoi"
 repository = "https://github.com/qurashiakh/tcoi"
