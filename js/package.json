@@ -1,0 +1,22 @@
+{
+  "name": "tcoi",
+  "version": "0.1.1",
+  "description": "A New Form of Decentralised Hashing.",
+  "type": "module",
+  "main": "lib.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qurashiakh/tcoi.git"
+  },
+  "keywords": [
+    "ishaq",
+    "hash",
+    "hashing"
+  ],
+  "author": "Husayn al-Qurashi <husayn@dnmx.org> (https://qurashiakh.github.io)",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/qurashiakh/tcoi/issues"
+  },
+  "homepage": "https://github.com/qurashiakh/tcoi#readme"
+}

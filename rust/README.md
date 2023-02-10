@@ -98,6 +98,35 @@ fn main() {
 }
 ```
 
+### IN JAVASCRIPT
+
+Install the `tcoi` library from `npm` using:
+
+```
+npm i tcoi
+```
+
+then make an instance of the `Hasher` object and make use of its methods to get TCOI codes.
+
+See `js/example.js`:
+```javascript
+import { Hasher } from 'tcoi'
+
+const hasher = new Hasher()
+
+const result = await hasher.get_tcoi("nice")
+console.log(result)
+
+const result2 = await hasher.get_tcoi("nice")
+console.log(result2)
+
+if (result.tcoi === result2.tcoi) {
+    console.log("WORKS!")
+} else {
+    console.log("SOMETHING GOT MESSED UP..")
+}
+```
+
 ## CONCLUSION
 
 The Code of Ishaq is an alternative form of hashing that aims to implement decentralised hashservers that accomplish the goal needed to validate information.
