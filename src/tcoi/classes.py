@@ -133,3 +133,12 @@ class Hasher():
         with open('.hashfile', 'w') as file:
             file.truncate(0)
             file.close()
+
+    def get_tcois(self, texts: list):
+        results = []
+        
+        for text in texts:
+            result = self.get_tcoi(text)
+            results.append(result)
+        
+        return results

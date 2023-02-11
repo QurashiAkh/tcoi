@@ -3,11 +3,11 @@ name = "tcoi"
 authors = ["Husayn al-Qurashi <husayn@dnmx.org>"]
 description = "A New Form of Decentralised Hashing."
 readme = "README.md"
-homepage = "https://github.com/qurashiakh/tcoi"
+homepage = "https://qurashiakh.github.io/the-code-of-ishaq.html"
 repository = "https://github.com/qurashiakh/tcoi"
 license = "GPL-3.0-only"
 keywords = ["ishaq", "hashing", "code"]
-version = "0.2.2"
+version = "0.2.3"
 edition = "2021"
 
 [badges]

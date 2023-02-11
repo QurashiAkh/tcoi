@@ -1,6 +1,6 @@
 {
   "name": "tcoi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A New Form of Decentralised Hashing.",
   "type": "module",
   "main": "lib.js",
@@ -18,5 +18,5 @@
   "bugs": {
     "url": "https://github.com/qurashiakh/tcoi/issues"
   },
-  "homepage": "https://github.com/qurashiakh/tcoi#readme"
+  "homepage": "https://qurashiakh.github.io/the-code-of-ishaq.html"
 }

@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 
 export class Hasher {
-    gen_tcoi = () => {
+    genTcoi = () => {
         const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.']
         let code = "Q-"
 
@@ -13,7 +13,7 @@ export class Hasher {
         return code
     }
 
-    check_hashfile = async () => {
+    checkHashfile = async () => {
         try {
             await fs.access('.hashfile')
         } catch {
@@ -21,11 +21,38 @@ export class Hasher {
         }
     }
 
-    get_tcoi = async text => {
+    clearHashfile = async () => {
+        await this.checkHashfile()
+
+        await fs.truncate('.hashfile', 0);
+    }
+
+    getAllCodes = async () => {
+        let results = []
+
+        const hashfileContent = (await fs.readFile('.hashfile')).toString()
+
+        const lines = hashfileContent.split("\n")
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+
+            let text = line.substring(0, line.lastIndexOf(": "));
+            let code = line.substring(line.lastIndexOf(": ") + 2, line.length);
+
+            if (code != '') {
+                results.push({ text: text, tcoi: code })
+            }
+        }
+
+        return results
+    }
+
+    getTcoi = async text => {
         if (text.trim() === "") {
             return "NO TEXT PROVIDED!"
         } else {
-            await this.check_hashfile()
+            await this.checkHashfile()
 
             try {
                 let returnedText = text;
@@ -46,7 +73,7 @@ export class Hasher {
                     }
 
                     if (returnedCode === '') {
-                        returnedCode = this.gen_tcoi()
+                        returnedCode = this.genTcoi()
 
                         await fs.appendFile('.hashfile', `${text}: ${returnedCode}\n`)
 

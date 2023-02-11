@@ -1,4 +1,6 @@
 __pycache__/
 dist/
+*.egg-info/
+
 target/
-tcoi.egg-info/
+Cargo.lock

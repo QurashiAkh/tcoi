@@ -34,6 +34,33 @@ impl Hasher {
         }
     }
 
+    pub fn clear_hashfile(&self) {
+        self.check_hashfile();
+
+        File::create(".hashfile").expect("UNABLE TO CLEAR HASHFILE!");
+    }
+
+    pub fn get_all_codes(&self) -> HashMap<String, String> {
+        self.check_hashfile();
+
+        let mut result: HashMap<String, String> = HashMap::new();
+
+        let hashfile_content = fs::read_to_string(".hashfile").expect("UNABLE TO READ HASHFILE!");
+
+        for line in hashfile_content.split("\n") {
+            let found_vec = match line.rsplit_once(": ") {
+                Some(found_vec) => found_vec,
+                None => ("NONE FOUND!", "NONE FOUND!"),
+            };
+
+            if found_vec.1.starts_with("Q-") {
+                result.insert(found_vec.0.to_string(), found_vec.1.to_string());
+            }
+        }
+
+        return result;
+    }
+
     pub fn get_tcoi(&self, text: String) -> Result<HashMap<String, String>, EmptyTextError> {
         if text.trim() == String::from("") {
             return Err(EmptyTextError);
