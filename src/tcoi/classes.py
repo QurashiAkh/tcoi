@@ -1,11 +1,23 @@
 import random
 from . import errors
 
+
 class Hasher():
     def __init__(self):
         pass
 
     def get_tcoi(self, text: str):
+        """Generate an Ishaq Code and assign it to a text.
+
+        Args:
+            text (str): input text
+
+        Raises:
+            errors.EmptyText: raised when the text is empty
+
+        Returns:
+            dict: the result which contains the original text and the TCOI in a dictionary
+        """
         text = text.strip()
 
         if text:
@@ -95,6 +107,11 @@ class Hasher():
             raise errors.EmptyText("CAN NOT GET TCOI!")
 
     def get_all_codes(self):
+        """Returns all Ishaq Codes stored in the Hashfile.
+
+        Returns:
+            list: list of results containing found texts and their assigned Ishaq Codes.
+        """
         with open('.hashfile') as file:
             lines = file.readlines()
             results = []
@@ -130,15 +147,24 @@ class Hasher():
         return results
 
     def clear_hashfile(self):
+        """Truncates the Hashfile and removes all Ishaq Codes."""
         with open('.hashfile', 'w') as file:
             file.truncate(0)
             file.close()
 
     def get_tcois(self, texts: list):
+        """Returns a list of results containing lists of original texts and their assigned Ishaq Codes.
+
+        Args:
+            texts (list): input list of texts to be generated Ishaq Codes for
+
+        Returns:
+            list: list of results
+        """
         results = []
-        
+
         for text in texts:
             result = self.get_tcoi(text)
             results.append(result)
-        
+
         return results

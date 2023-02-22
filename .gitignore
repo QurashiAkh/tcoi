@@ -1,6 +1,11 @@
+# VSCode
+.vscode/
+
+# Python
 __pycache__/
 dist/
 *.egg-info/
 
+# Rust
 target/
 Cargo.lock

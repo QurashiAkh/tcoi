@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tcoi"
-version = "0.1.4"
+version = "0.2.4"
 authors = [
   { name="Husayn al-Qurashi", email="husayn@dnmx.org" },
 ]
@@ -19,5 +19,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://qurashiakh.github.io/the-code-of-ishaq.html"
+"Homepage" = "https://qurashiakh.dev/the-code-of-ishaq.html"
 "Bug Tracker" = "https://github.com/qurashiakh/tcoi/issues"

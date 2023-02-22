@@ -80,8 +80,8 @@ export class Hasher {
                         return { text: text, tcoi: returnedCode }
                     }
                 }
-            } catch (e) {
-                return "UNABLE TO READ HASHFILE!" + e
+            } catch {
+                return "UNABLE TO READ HASHFILE!"
             }
         }
     }
